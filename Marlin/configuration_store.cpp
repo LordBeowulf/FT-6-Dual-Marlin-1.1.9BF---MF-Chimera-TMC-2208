@@ -1387,7 +1387,8 @@ void MarlinSettings::postprocess() {
             SET_CURR(Y);
           #endif
           #if AXIS_IS_TMC(Z)
-            SET_CURR(Z);
+						stepperZ.setCurrent(currents[TMC_Z] ? currents[TMC_Z] : Z_CURRENT, R_SENSE, 1.0)  // Keep Z holding at full current.  Prevent slippage on long layers.
+            //SET_CURR(Z);
           #endif
           #if AXIS_IS_TMC(X2)
             SET_CURR(X2);

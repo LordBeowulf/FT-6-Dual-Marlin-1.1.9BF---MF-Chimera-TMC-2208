@@ -1100,15 +1100,15 @@
 
   #define R_SENSE           0.11  // R_sense resistor for SilentStepStick2130
   #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
-  #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
+  #define INTERPOLATE       false  // DON'T Interpolate X/Y/Z_MICROSTEPS to 256 -- See if this fixes X and Z problems
 
-  #define X_CURRENT         1000 ///1414  // 2.0 A Peak // rms current in mA. Multiply by 1.41 for peak current.
+  #define X_CURRENT         1000  // 1.414 Amp Peak since we can't hit 2.0 // rms current in mA. Multiply by 1.41 for peak current.
   #define X_MICROSTEPS        16  // 0..256  -- Appstrntly old driver was 32 microsteps per step, so we might as well go to 256...  Ok, 256 is too slow.. 
 
   #define Y_CURRENT          885  // 1.25 A Peak (Motors are 1.5 A)
   #define Y_MICROSTEPS        16
 
-  #define Z_CURRENT          885  // 1.25 A Peak (Motors are 1.5 A)
+  #define Z_CURRENT         1000  // 1.414 A Peak to give Z axis more holding power (Motors are 1.5 A)
   #define Z_MICROSTEPS        16
 
   #define X2_CURRENT         800
