@@ -620,7 +620,8 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 720, 95 }  //  32 	microsteps/step { 640, 640, 5760, 760 }
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 720, 89, 88 }  //  Calibrating Extruder, 32	microsteps/step
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 720, 89, 88 }  //  Calibrating Extruder, 32	microsteps/step
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 720, 94, 88 }  //  Calibrating Extruder, 32	microsteps/step  -- 93 comes from Ender 3 firmware.  Extruder drive has a smaller wheel.
 
 /**
  * Default Max Feed Rate (mm/s)
